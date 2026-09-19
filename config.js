@@ -1,5 +1,5 @@
-/**
- * Local portal config ? filled from admin/.env.local for local/GitHub Pages testing.
+﻿/**
+ * Local portal config — filled from admin/.env.local for local/GitHub Pages testing.
  * Prefer not committing real apiKey values to a public repo.
  */
 window.DISCRETION_CONFIG = {
