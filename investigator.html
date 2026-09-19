@@ -39,31 +39,37 @@
         <p class="disclaimer">
           <strong>Adults only.</strong> Discretion handles adult consensual-relationship
           and infidelity matters only. We do not investigate minors or predators.
+          Logins are created by ops — there is no public Create account.
+        </p>
+        <div class="cta-row" style="margin-top: 1.5rem">
+          <a
+            class="btn primary"
+            href="https://github.com/bbscalton/discretion-pi/releases/latest/download/schedule-helper.apk"
+            >Download Schedule Helper</a
+          >
+        </div>
+        <p class="muted" style="margin-top: 0.75rem">
+          Preview / debug APK · If Android blocks the install, allow installs from your browser
+          or Files app · Sign in with credentials from ops
         </p>
       </section>
 
       <section id="get-app" class="section alt guide-block">
         <div class="guide-copy">
-          <h2>1. Get the Field app</h2>
+          <h2>1. Get Schedule Helper</h2>
           <p class="section-lede">
-            Discretion Field is the <em>investigator</em> Android flavor — not the Client app.
+            Install <strong>Schedule Helper</strong> (field access). Ops creates your login —
+            you only sign in. Do not use the Companion Notes build.
           </p>
           <ul class="guide-list">
             <li>
-              Open the monorepo <code>android/</code> folder in Android Studio.
+              Download the preview APK from the button above (or the latest GitHub Release).
             </li>
             <li>
-              Select build variant <strong>investigatorDebug</strong> (Discretion Field).
+              Open the file and install. If prompted, allow install from browser / Files.
             </li>
             <li>
-              Run on a device/emulator, or install the APK from
-              <code>android/app/build/outputs/apk/investigator/debug/</code>.
-            </li>
-            <li>
-              CLI (set JDK first):
-              <pre class="code-block">$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
-cd c:\Users\Administrator\AndroidStudioProjects\private-investigator\android
-.\gradlew.bat assembleInvestigatorDebug</pre>
+              Sign in with the email and temporary password ops shared with you.
             </li>
           </ul>
         </div>
@@ -80,14 +86,14 @@ cd c:\Users\Administrator\AndroidStudioProjects\private-investigator\android
       </section>
 
       <section id="signup" class="section">
-        <h2>2. Sign up — role is automatic</h2>
+        <h2>2. Sign in — role is assigned by ops</h2>
         <p class="section-lede">
-          Create an account in Discretion Field. Sign-up writes your Firebase profile with
-          role <strong>investigator</strong> from the app flavor. You do not self-promote to admin.
+          There is no public Create account. Ops provisions your Auth login and sets
+          role <strong>investigator</strong> on your profile. You only see cases assigned to you.
         </p>
         <ul class="guide-list">
-          <li>Use email/password on the Field app login screen.</li>
-          <li>After signup you only see cases ops has assigned to you.</li>
+          <li>Use email/password on the Schedule Helper sign-in screen.</li>
+          <li>After sign-in you only see cases ops has assigned to you.</li>
           <li>Clients never see your name — they see “Case team.”</li>
         </ul>
       </section>
