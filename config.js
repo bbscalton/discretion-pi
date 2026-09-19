@@ -1,6 +1,6 @@
-﻿/**
- * Local portal config — filled from admin/.env.local for local/GitHub Pages testing.
- * Prefer not committing real apiKey values to a public repo.
+/**
+ * Portal runtime config for GitHub Pages / local preview.
+ * Firebase web apiKey is public client config; keep Worker secrets out of this file.
  */
 window.DISCRETION_CONFIG = {
   firebase: {
