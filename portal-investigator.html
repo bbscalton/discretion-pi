@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Field team portal — Discretion</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="./">Discretion</a>
+      <nav>
+        <a href="./">Home</a>
+        <a href="./investigator.html">Field guide</a>
+        <button type="button" class="btn ghost portal-signout" id="sign-out-btn" hidden>
+          Sign out
+        </button>
+      </nav>
+    </header>
+
+    <main class="portal-main">
+      <section id="portal-setup" class="section portal-section" data-portal-section>
+        <h1>Field team portal</h1>
+        <p class="section-lede">
+          Copy <code>config.example.js</code> to <code>config.js</code> and add your Firebase web
+          config before using this portal.
+        </p>
+      </section>
+
+      <section id="portal-sign-in" class="section portal-section" data-portal-section hidden>
+        <h1>Join field team</h1>
+        <p class="section-lede">
+          Continue with Google to apply as a field investigator. Adults only. You will not see cases
+          until your account is approved and you set an app password.
+        </p>
+        <div class="portal-card">
+          <button type="button" class="btn primary portal-google-btn" id="google-sign-in">
+            Continue with Google
+          </button>
+          <p class="form-status" id="sign-in-status" role="status" hidden></p>
+        </div>
+      </section>
+
+      <section id="portal-onboarding" class="section portal-section" data-portal-section hidden>
+        <h1>Investigator application</h1>
+        <p class="section-lede">
+          Provide accurate identity and availability information. ID and selfie help operations
+          verify field eligibility.
+        </p>
+        <form class="intake-form portal-form" id="investigator-application-form" novalidate>
+          <label>
+            Legal name
+            <input name="legalName" required autocomplete="name" />
+          </label>
+          <label>
+            Date of birth <span class="optional">(must be 18+)</span>
+            <input name="dateOfBirth" type="date" required />
+          </label>
+          <label>
+            Phone
+            <input name="phone" type="tel" required autocomplete="tel" />
+          </label>
+          <label>
+            City / region
+            <input name="cityRegion" required />
+          </label>
+          <label>
+            Experience
+            <textarea name="experience" rows="3" required placeholder="Surveillance, PI license, relevant background…"></textarea>
+          </label>
+          <label>
+            Government ID
+            <input name="idDocument" type="file" accept="image/*,application/pdf" required />
+          </label>
+          <label>
+            Selfie (match ID)
+            <input name="idSelfie" type="file" accept="image/*" required />
+          </label>
+          <label>
+            Availability
+            <textarea name="availability" rows="2" required placeholder="Evenings, weekends, travel radius…"></textarea>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="affirmLawful" required />
+            I agree to lawful, discreet observation only — no confrontation, harassment, or illegal activity.
+          </label>
+          <label class="check">
+            <input type="checkbox" name="affirmAdults" required />
+            I confirm I am 18 or older and will work adult relationship matters only.
+          </label>
+          <p class="form-status" id="application-status" role="status" hidden></p>
+          <button class="btn primary" type="submit" id="submit-application">Submit application</button>
+        </form>
+      </section>
+
+      <section id="portal-dashboard" class="section portal-section" data-portal-section hidden>
+        <h1>Your dashboard</h1>
+        <p class="section-lede" id="dashboard-greeting"></p>
+
+        <div class="portal-card">
+          <h2>Application status</h2>
+          <p class="portal-status" id="account-status-line"></p>
+          <p class="muted" id="account-status-detail"></p>
+        </div>
+
+        <div class="portal-card" id="notifications-panel">
+          <h2>Messages</h2>
+          <ul class="portal-messages" id="portal-messages"></ul>
+        </div>
+
+        <div class="portal-card" id="approved-actions" hidden>
+          <h2>Next steps</h2>
+          <p class="muted">
+            Set an app password for Schedule Helper, then download and sign in with email + password.
+            Case assignments appear only after approval and password setup.
+          </p>
+          <form class="intake-form portal-form" id="app-password-form">
+            <label>
+              App password
+              <input name="appPassword" type="password" minlength="6" required autocomplete="new-password" />
+            </label>
+            <label>
+              Confirm password
+              <input name="appPasswordConfirm" type="password" minlength="6" required autocomplete="new-password" />
+            </label>
+            <p class="form-status" id="password-status" role="status" hidden></p>
+            <div class="cta-row">
+              <button class="btn primary" type="submit">Set app password</button>
+              <a class="btn ghost" id="investigator-app-download" href="#" download>Download Schedule Helper</a>
+            </div>
+          </form>
+          <p class="muted" id="app-password-set-note" hidden>App password is set. Sign into the Android app to see assignments.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Discretion · Field portal · Adults only</p>
+    </footer>
+
+    <script src="config.example.js"></script>
+    <script src="config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
+    <script src="js/portal-shared.js"></script>
+    <script src="js/r2-portal.js"></script>
+    <script src="js/portal-investigator.js"></script>
+  </body>
+</html>

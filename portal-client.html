@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Client portal — Discretion</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="./">Discretion</a>
+      <nav>
+        <a href="./">Home</a>
+        <a href="./client.html">Client guide</a>
+        <button type="button" class="btn ghost portal-signout" id="sign-out-btn" hidden>
+          Sign out
+        </button>
+      </nav>
+    </header>
+
+    <main class="portal-main">
+      <section id="portal-setup" class="section portal-section" data-portal-section>
+        <h1>Client portal</h1>
+        <p class="section-lede">
+          Copy <code>config.example.js</code> to <code>config.js</code> and add your Firebase web
+          config before using this portal.
+        </p>
+      </section>
+
+      <section id="portal-sign-in" class="section portal-section" data-portal-section hidden>
+        <h1>Request investigation</h1>
+        <p class="section-lede">
+          Continue with Google to start your confidential application. Adults only — both you and
+          the subject must be 18 or older. Your account stays pending until operations approves it.
+        </p>
+        <div class="portal-card">
+          <button type="button" class="btn primary portal-google-btn" id="google-sign-in">
+            Continue with Google
+          </button>
+          <p class="form-status" id="sign-in-status" role="status" hidden></p>
+        </div>
+      </section>
+
+      <section id="portal-onboarding" class="section portal-section" data-portal-section hidden>
+        <h1>Application &amp; case brief</h1>
+        <p class="section-lede">
+          Complete every required field. Uploads are optional except where noted. We review account
+          approval and case acceptance separately.
+        </p>
+        <form class="intake-form portal-form" id="client-application-form" novalidate>
+          <h2 class="portal-form-heading">About you</h2>
+          <label>
+            Full legal name
+            <input name="legalName" required autocomplete="name" />
+          </label>
+          <label>
+            Date of birth <span class="optional">(must be 18+)</span>
+            <input name="dateOfBirth" type="date" required />
+          </label>
+          <label>
+            Phone
+            <input name="phone" type="tel" required autocomplete="tel" />
+          </label>
+          <label>
+            ID document <span class="optional">(optional)</span>
+            <input name="idDocument" type="file" accept="image/*,application/pdf" />
+          </label>
+
+          <h2 class="portal-form-heading">Subject of investigation</h2>
+          <label>
+            Subject name
+            <input name="subjectName" required />
+          </label>
+          <label>
+            Estimated age <span class="optional">(must be 18+)</span>
+            <input name="subjectEstimatedAge" type="number" min="18" max="120" required />
+          </label>
+          <label>
+            Subject photos
+            <input name="subjectPhotos" type="file" accept="image/*" multiple />
+          </label>
+          <label>
+            Known places / routines
+            <textarea name="knownPlaces" rows="3" required placeholder="Neighborhoods, venues, work area…"></textarea>
+          </label>
+          <label>
+            Relationship context
+            <textarea
+              name="relationshipContext"
+              rows="4"
+              required
+              placeholder="Your relationship to the subject and what you need confirmed…"
+            ></textarea>
+          </label>
+
+          <h2 class="portal-form-heading">Leads &amp; context</h2>
+          <label>
+            Leads &amp; notes
+            <textarea
+              name="leadsNotes"
+              rows="4"
+              required
+              placeholder="Screenshots described, schedules, vehicle notes…"
+            ></textarea>
+          </label>
+
+          <h2 class="portal-form-heading">Affirmations</h2>
+          <label class="check">
+            <input type="checkbox" name="affirmAdults" required />
+            I confirm I am 18 or older and the subject is 18 or older.
+          </label>
+          <label class="check">
+            <input type="checkbox" name="affirmLawful" required />
+            I confirm this is a lawful adult relationship matter — not involving minors.
+          </label>
+          <label class="check">
+            <input type="checkbox" name="affirmPurpose" required />
+            I understand Discretion does not support confrontation, harassment, or illegal activity.
+          </label>
+
+          <p class="form-status" id="application-status" role="status" hidden></p>
+          <button class="btn primary" type="submit" id="submit-application">Submit application</button>
+        </form>
+      </section>
+
+      <section id="portal-dashboard" class="section portal-section" data-portal-section hidden>
+        <h1>Your dashboard</h1>
+        <p class="section-lede" id="dashboard-greeting"></p>
+
+        <div class="portal-grid">
+          <div class="portal-card">
+            <h2>Account status</h2>
+            <p class="portal-status" id="account-status-line"></p>
+            <p class="muted" id="account-status-detail"></p>
+          </div>
+          <div class="portal-card">
+            <h2>Case status</h2>
+            <p class="portal-status" id="case-status-line"></p>
+            <p class="muted" id="case-status-detail"></p>
+          </div>
+        </div>
+
+        <div class="portal-card" id="notifications-panel">
+          <h2>Messages</h2>
+          <ul class="portal-messages" id="portal-messages"></ul>
+        </div>
+
+        <div class="portal-card" id="approved-actions" hidden>
+          <h2>Next steps</h2>
+          <p class="muted">
+            Set an app password for the Companion Notes Android app, then download and sign in with
+            email + password (not Google).
+          </p>
+          <form class="intake-form portal-form" id="app-password-form">
+            <label>
+              App password <span class="optional">(min 6 characters)</span>
+              <input name="appPassword" type="password" minlength="6" required autocomplete="new-password" />
+            </label>
+            <label>
+              Confirm password
+              <input name="appPasswordConfirm" type="password" minlength="6" required autocomplete="new-password" />
+            </label>
+            <p class="form-status" id="password-status" role="status" hidden></p>
+            <div class="cta-row">
+              <button class="btn primary" type="submit">Set app password</button>
+              <a class="btn ghost" id="client-app-download" href="#" download>Download Companion Notes</a>
+            </div>
+          </form>
+          <p class="muted" id="app-password-set-note" hidden>App password is set. Use it to sign into the Android app.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Discretion · Client portal · Adults only</p>
+    </footer>
+
+    <script src="config.example.js"></script>
+    <script src="config.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
+    <script src="js/portal-shared.js"></script>
+    <script src="js/r2-portal.js"></script>
+    <script src="js/portal-client.js"></script>
+  </body>
+</html>

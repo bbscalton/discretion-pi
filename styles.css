@@ -481,6 +481,95 @@ nav a[aria-current="page"] {
   color: var(--brass);
 }
 
+/* ---- Portal (client / investigator) ---- */
+.portal-main {
+  min-height: calc(100vh - 140px);
+}
+
+.portal-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 6vw 6rem;
+}
+
+.portal-card {
+  background: rgba(22, 27, 32, 0.85);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.portal-form-heading {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  margin: 2rem 0 0.75rem;
+  color: var(--mist);
+}
+
+.portal-form-heading:first-of-type {
+  margin-top: 0;
+}
+
+.portal-status {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+  text-transform: capitalize;
+}
+
+.portal-status[data-status="approved"] {
+  color: #7cb88a;
+}
+
+.portal-status[data-status="pending"],
+.portal-status[data-status="submitted"],
+.portal-status[data-status="intake"] {
+  color: var(--brass);
+}
+
+.portal-status[data-status="rejected"],
+.portal-status[data-status="declined"],
+.portal-status[data-status="blocked"] {
+  color: #c97858;
+}
+
+.portal-messages {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--fog);
+}
+
+.portal-messages li {
+  margin-bottom: 0.45rem;
+}
+
+.portal-google-btn {
+  width: 100%;
+  max-width: 320px;
+}
+
+.form-status.ok {
+  color: #7cb88a;
+}
+
+.form-status.error {
+  color: #c97858;
+}
+
+.portal-signout {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--line);
+}
+
 @media (max-width: 860px) {
   .hero {
     min-height: 85vh;
