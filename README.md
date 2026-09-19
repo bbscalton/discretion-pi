@@ -26,6 +26,9 @@ Generated brand stills live under `images/`:
 | `images/privacy-secure.png` | Scope / privacy |
 | `images/cafe-evening-bokeh.png` | Atmosphere band |
 | `images/tutorial-*.png` | Field investigator guide (`investigator.html`) |
+| `images/client-tutorial-*.png` | Client app guide (`client.html`) |
+
+Client guide: **https://bbscalton.github.io/discretion-pi/client.html**
 
 Field guide: **https://bbscalton.github.io/discretion-pi/investigator.html**
 

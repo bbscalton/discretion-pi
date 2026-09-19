@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Client guide — Discretion</title>
+    <meta
+      name="description"
+      content="How to use the Discretion Client app: intake, lead uploads, Case team updates, and the evidence vault after admin unlock."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="guide-page">
+    <header class="site-header">
+      <a class="logo" href="./">Discretion</a>
+      <nav>
+        <a href="./">Home</a>
+        <a href="./client.html" aria-current="page">Client guide</a>
+        <a href="./investigator.html">Field guide</a>
+        <a href="./#intake" class="nav-cta">Start intake</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="guide-hero section">
+        <p class="eyebrow">Client app</p>
+        <h1>Client guide</h1>
+        <p class="lede">
+          How to open Discretion Client, submit your case, send leads to ops,
+          follow Case team updates, and view approved evidence after unlock.
+        </p>
+        <p class="disclaimer">
+          <strong>Adults only.</strong> Discretion handles adult consensual-relationship
+          and infidelity matters only. We do not investigate minors or predators.
+          You never see investigator identity — only “Case team.”
+        </p>
+      </section>
+
+      <section id="get-app" class="section alt guide-block">
+        <div class="guide-copy">
+          <h2>1. Sign up &amp; open Client</h2>
+          <p class="section-lede">
+            Discretion Client is the <em>client</em> Android flavor — not the Field app.
+          </p>
+          <ul class="guide-list">
+            <li>
+              Open the monorepo <code>android/</code> folder in Android Studio.
+            </li>
+            <li>
+              Select build variant <strong>clientDebug</strong> (Discretion Client).
+            </li>
+            <li>
+              Run on a device/emulator, or install the APK from
+              <code>android/app/build/outputs/apk/client/debug/</code>.
+            </li>
+            <li>
+              Create an account with email/password. Sign-up sets your role to
+              <strong>client</strong> from the app flavor.
+            </li>
+            <li>
+              CLI (set JDK first):
+              <pre class="code-block">$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+cd c:\Users\Administrator\AndroidStudioProjects\private-investigator\android
+.\gradlew.bat assembleClientDebug</pre>
+            </li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/client-tutorial-signup.png"
+            alt="Phone mockup showing Discretion Client sign-in on a dark desk"
+            width="1600"
+            height="900"
+            loading="eager"
+          />
+          <figcaption>Client app only — Field is a separate build for investigators.</figcaption>
+        </figure>
+      </section>
+
+      <section id="intake" class="section guide-block">
+        <div class="guide-copy">
+          <h2>2. Submit intake / open a case</h2>
+          <p class="section-lede">
+            Start with a confidential brief: subject context, locations, and timeline.
+            Ops reviews intake before assignment.
+          </p>
+          <ul class="guide-list">
+            <li>Confirm the matter involves <strong>adults only</strong>.</li>
+            <li>Be factual: who, where, when — avoid speculation.</li>
+            <li>
+              Status begins at <strong>intake</strong>, then moves through
+              assigned → active → under_review → ready_to_unlock → unlocked
+              as ops and field work progress.
+            </li>
+            <li>
+              Website intake requests are a first contact; full case work continues
+              in the Client app after your account is provisioned.
+            </li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/client-tutorial-intake.png"
+            alt="Phone showing a confidential case intake form at dusk"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Your brief goes to ops first — not directly to a field investigator.</figcaption>
+        </figure>
+      </section>
+
+      <section id="leads" class="section alt guide-block">
+        <div class="guide-copy">
+          <h2>3. Upload leads to admin</h2>
+          <p class="section-lede">
+            Send photos and notes that help ops (messaging screenshots, location
+            hints, timelines). Leads go to <strong>admin first</strong> — they are
+            sanitized before any field release.
+          </p>
+          <ul class="guide-list">
+            <li>Upload clear screenshots and photos from your gallery.</li>
+            <li>Add short factual captions: date, place, why it matters.</li>
+            <li>Do not confront the subject or tip them off while collecting leads.</li>
+            <li>Investigator identity stays hidden; you will not see who works the case.</li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/client-tutorial-leads.png"
+            alt="Phone uploading lead photo thumbnails to a confidential case app"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Leads reach admin for review before anything reaches the field.</figcaption>
+        </figure>
+      </section>
+
+      <section id="updates" class="section guide-block">
+        <div class="guide-copy">
+          <h2>4. Status updates &amp; Case team chat</h2>
+          <p class="section-lede">
+            Follow your case timeline and message <strong>Case team</strong> —
+            brand/support/admin chat, never investigator legal names.
+          </p>
+          <ul class="guide-list">
+            <li>
+              Timeline:
+              <strong>intake</strong> → <strong>assigned</strong> →
+              <strong>active</strong> → <strong>under_review</strong> →
+              <strong>ready_to_unlock</strong> → <strong>unlocked</strong>.
+            </li>
+            <li>During active / undercover work, updates stay high-level by design.</li>
+            <li>Ask Case team questions in-app; do not expect real-time field narration.</li>
+            <li>You will never see investigator identity in chat or status.</li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/client-tutorial-updates.png"
+            alt="Phone showing case status timeline and Case team support chat"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Case team = ops/support brand — not a named investigator.</figcaption>
+        </figure>
+      </section>
+
+      <section id="vault" class="section alt guide-block">
+        <div class="guide-copy">
+          <h2>5. Evidence vault — locked until unlock</h2>
+          <p class="section-lede">
+            Approved field evidence stays in a locked vault until admin sets the
+            case to <strong>unlocked</strong> after <strong>ready_to_unlock</strong>.
+            Unlock is manual (ops) — this guide does not cover online payment.
+          </p>
+          <ul class="guide-list">
+            <li>While locked: you see status and Case team updates, not media.</li>
+            <li>Admin approves captures before they can appear in your package.</li>
+            <li>
+              After <strong>unlocked</strong>: view the approved Court Package /
+              evidence the team released for you.
+            </li>
+            <li>Clients cannot unlock a case themselves.</li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/client-tutorial-vault.png"
+            alt="Locked evidence vault contrasted with unlocked approved package"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Locked vault first; approved evidence only after admin unlock.</figcaption>
+        </figure>
+      </section>
+
+      <section id="look-out" class="section guide-block">
+        <div class="guide-copy">
+          <h2>6. What to look out for</h2>
+          <ul class="guide-list">
+            <li>
+              <strong>Privacy</strong> — keep case talk private; do not post about
+              an active investigation.
+            </li>
+            <li>
+              <strong>Do not confront</strong> the subject, third parties, or anyone
+              you believe is involved.
+            </li>
+            <li>
+              <strong>High-level updates during undercover</strong> — limited detail
+              while status is active / under_review is normal.
+            </li>
+            <li>
+              <strong>Evidence only after unlock</strong> — vault media appears when
+              admin sets unlocked, not sooner.
+            </li>
+            <li>
+              <strong>Adults only</strong> — Discretion does not take minor or
+              predator matters.
+            </li>
+            <li>
+              <strong>Identity hidden</strong> — if someone claims to be “your
+              investigator,” contact Case team through the app.
+            </li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/client-tutorial-look-out.png"
+            alt="Desk checklist cards for privacy, no confrontation, and unlock timing"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Stay discreet, stay patient, let ops unlock when ready.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section alt">
+        <h2>Field team?</h2>
+        <p class="section-lede">
+          Investigators use Discretion Field — a separate app and guide. Clients
+          never share that surface.
+        </p>
+        <div class="cta-row">
+          <a class="btn ghost" href="./">Back to Discretion</a>
+          <a class="btn primary" href="./investigator.html">Field investigator guide</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Discretion · Client guide</p>
+      <p class="muted">
+        Adults only · Case team only (no investigator identity) · Manual admin unlock
+      </p>
+    </footer>
+  </body>
+</html>

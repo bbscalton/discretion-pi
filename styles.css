@@ -500,7 +500,7 @@ nav a[aria-current="page"] {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  nav a:not(.nav-cta):not([href*="investigator"]) {
+  nav a:not(.nav-cta):not([href*="investigator"]):not([href*="client"]) {
     display: none;
   }
 }
