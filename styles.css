@@ -22,11 +22,7 @@ body {
   margin: 0;
   color: var(--mist);
   font-family: var(--font-body);
-  background:
-    linear-gradient(180deg, rgba(14, 17, 20, 0.2), rgba(14, 17, 20, 0.85)),
-    radial-gradient(ellipse 100% 80% at 70% 10%, rgba(196, 165, 116, 0.14), transparent 55%),
-    url("assets/hero.svg") center top / cover no-repeat,
-    var(--ink);
+  background: var(--ink);
   line-height: 1.55;
 }
 
@@ -76,12 +72,36 @@ nav a:hover {
 }
 
 .hero {
+  position: relative;
   min-height: calc(100vh - 72px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 10vh 6vw 12vh;
-  position: relative;
+  overflow: hidden;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(14, 17, 20, 0.35) 0%, rgba(14, 17, 20, 0.55) 45%, rgba(14, 17, 20, 0.92) 100%),
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(196, 165, 116, 0.12), transparent 55%);
 }
 
 .hero-copy {
@@ -154,8 +174,6 @@ nav a:hover {
   border-color: rgba(232, 228, 220, 0.28);
 }
 
-/* Full-bleed atmosphere lives on body; keep hero text-led without inset media cards */
-
 .section {
   padding: 5rem 6vw;
   max-width: 1100px;
@@ -164,6 +182,34 @@ nav a:hover {
 .section.alt {
   background: rgba(22, 27, 32, 0.72);
   max-width: none;
+  padding-left: max(6vw, calc((100vw - 1100px) / 2 + 6vw));
+  padding-right: max(6vw, calc((100vw - 1100px) / 2 + 6vw));
+}
+
+.section.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 3rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section.split.reverse {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.section.split.reverse .split-copy {
+  order: 2;
+}
+
+.section.split.reverse .split-visual {
+  order: 1;
+}
+
+.section.split.alt {
+  max-width: none;
+  margin: 0;
   padding-left: max(6vw, calc((100vw - 1100px) / 2 + 6vw));
   padding-right: max(6vw, calc((100vw - 1100px) / 2 + 6vw));
 }
@@ -180,6 +226,49 @@ nav a:hover {
   color: var(--fog);
   max-width: 40rem;
   margin: 0 0 2rem;
+}
+
+.split-visual {
+  margin: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.split-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+.atmosphere {
+  position: relative;
+  height: clamp(12rem, 28vw, 22rem);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.atmosphere img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
+  filter: saturate(0.85) brightness(0.72);
+}
+
+.atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 17, 20, 0.55),
+    rgba(14, 17, 20, 0.25),
+    rgba(14, 17, 20, 0.55)
+  );
 }
 
 .steps {
@@ -283,9 +372,18 @@ nav a:hover {
 
 @media (max-width: 860px) {
   .hero {
-    min-height: auto;
+    min-height: 85vh;
     padding-top: 5rem;
     padding-bottom: 4rem;
+  }
+  .section.split,
+  .section.split.reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .section.split.reverse .split-copy,
+  .section.split.reverse .split-visual {
+    order: unset;
   }
   nav a:not(.nav-cta) {
     display: none;

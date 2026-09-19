@@ -15,9 +15,28 @@ Published from the public repo [`bbscalton/discretion-pi`](https://github.com/bb
 npx --yes serve website
 ```
 
+## Images
+
+Generated brand stills live under `images/`:
+
+| File | Use |
+|------|-----|
+| `images/hero-city-dusk.png` | Full-bleed hero |
+| `images/how-it-works-trust.png` | How it works |
+| `images/privacy-secure.png` | Scope / privacy |
+| `images/cafe-evening-bokeh.png` | Atmosphere band |
+
+## Admin panel (ops)
+
+Marketing site has no admin login. Ops panel is local:
+
+1. Firebase Console (`piint-44500`) → Auth → add Email/Password user (or use an Android signup UID).
+2. Firestore `users/{uid}` → set `role` to `"admin"`.
+3. `cd admin && npm install && npm run dev` → http://localhost:5173 with `VITE_USE_STUB=false` and Firebase web config in `.env.local`.
+
 ## Updating the site
 
-1. Edit files under `website/` in the private monorepo (`index.html`, `styles.css`, `intake.js`, `assets/`).
+1. Edit files under `website/` in the private monorepo (`index.html`, `styles.css`, `intake.js`, `images/`).
 2. Commit and push to `private-investigator` `main`.
 3. Sync the public Pages repo:
 
