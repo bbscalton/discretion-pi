@@ -370,6 +370,117 @@ nav a:hover {
   font-size: 0.9rem;
 }
 
+/* Investigator / field guide page */
+.guide-page .guide-hero {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.guide-page .guide-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.75rem, 7vw, 4.5rem);
+  line-height: 1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.disclaimer {
+  max-width: 40rem;
+  margin: 1.5rem 0 0;
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--brass);
+  background: rgba(22, 27, 32, 0.65);
+  color: var(--fog);
+  font-size: 0.95rem;
+}
+
+.disclaimer strong {
+  color: var(--mist);
+}
+
+.guide-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 2.5rem;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.guide-block:not(.alt) {
+  max-width: 1100px;
+}
+
+.guide-block.alt {
+  max-width: none;
+  margin: 0;
+}
+
+.guide-block .guide-copy {
+  min-width: 0;
+}
+
+.guide-block .guide-visual {
+  margin: 0;
+}
+
+.guide-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--fog);
+  display: grid;
+  gap: 0.65rem;
+}
+
+.guide-list strong {
+  color: var(--mist);
+}
+
+.guide-list code,
+.code-block {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 0.85em;
+  color: var(--brass);
+}
+
+.code-block {
+  display: block;
+  margin: 0.65rem 0 0;
+  padding: 0.85rem 1rem;
+  background: rgba(14, 17, 20, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--mist);
+  overflow-x: auto;
+  white-space: pre;
+  line-height: 1.45;
+}
+
+.guide-visual {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.guide-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.guide-visual figcaption {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+  color: var(--fog);
+  border-top: 1px solid var(--line);
+  background: rgba(14, 17, 20, 0.45);
+}
+
+nav a[aria-current="page"] {
+  color: var(--brass);
+}
+
 @media (max-width: 860px) {
   .hero {
     min-height: 85vh;
@@ -385,7 +496,11 @@ nav a:hover {
   .section.split.reverse .split-visual {
     order: unset;
   }
-  nav a:not(.nav-cta) {
+  .guide-block {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  nav a:not(.nav-cta):not([href*="investigator"]) {
     display: none;
   }
 }

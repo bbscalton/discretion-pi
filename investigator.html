@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Field investigator guide — Discretion</title>
+    <meta
+      name="description"
+      content="How to install Discretion Field, work assigned cases, capture court-oriented evidence, and stay lawful and discreet."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="guide-page">
+    <header class="site-header">
+      <a class="logo" href="./">Discretion</a>
+      <nav>
+        <a href="./">Home</a>
+        <a href="./investigator.html" aria-current="page">Field guide</a>
+        <a href="./#intake" class="nav-cta">Start intake</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="guide-hero section">
+        <p class="eyebrow">Field / Investigator app</p>
+        <h1>Investigator guide</h1>
+        <p class="lede">
+          How to get Discretion Field, work only your assigned cases, capture
+          court-oriented evidence, and stay lawful, discreet, and safe.
+        </p>
+        <p class="disclaimer">
+          <strong>Adults only.</strong> Discretion handles adult consensual-relationship
+          and infidelity matters only. We do not investigate minors or predators.
+        </p>
+      </section>
+
+      <section id="get-app" class="section alt guide-block">
+        <div class="guide-copy">
+          <h2>1. Get the Field app</h2>
+          <p class="section-lede">
+            Discretion Field is the <em>investigator</em> Android flavor — not the Client app.
+          </p>
+          <ul class="guide-list">
+            <li>
+              Open the monorepo <code>android/</code> folder in Android Studio.
+            </li>
+            <li>
+              Select build variant <strong>investigatorDebug</strong> (Discretion Field).
+            </li>
+            <li>
+              Run on a device/emulator, or install the APK from
+              <code>android/app/build/outputs/apk/investigator/debug/</code>.
+            </li>
+            <li>
+              CLI (set JDK first):
+              <pre class="code-block">$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"
+cd c:\Users\Administrator\AndroidStudioProjects\private-investigator\android
+.\gradlew.bat assembleInvestigatorDebug</pre>
+            </li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/tutorial-get-app.png"
+            alt="Phone mockup showing assigned cases list in Discretion Field"
+            width="1600"
+            height="900"
+            loading="eager"
+          />
+          <figcaption>Assigned cases only — you never see the full case board.</figcaption>
+        </figure>
+      </section>
+
+      <section id="signup" class="section">
+        <h2>2. Sign up — role is automatic</h2>
+        <p class="section-lede">
+          Create an account in Discretion Field. Sign-up writes your Firebase profile with
+          role <strong>investigator</strong> from the app flavor. You do not self-promote to admin.
+        </p>
+        <ul class="guide-list">
+          <li>Use email/password on the Field app login screen.</li>
+          <li>After signup you only see cases ops has assigned to you.</li>
+          <li>Clients never see your name — they see “Case team.”</li>
+        </ul>
+      </section>
+
+      <section id="brief" class="section alt guide-block">
+        <div class="guide-copy">
+          <h2>3. Open a case &amp; read the brief</h2>
+          <p class="section-lede">
+            Open an assigned case. Read the <strong>released client brief</strong> and leads
+            that admin has sanitized for the field — not raw client private notes unless released.
+          </p>
+          <ul class="guide-list">
+            <li>Confirm locations, timeline, and subject identifiers in the brief.</li>
+            <li>Ask case support (ops) if a lead is unclear — do not invent facts.</li>
+            <li>Work only what was assigned; unassigned cases never appear.</li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/tutorial-case-brief.png"
+            alt="Released brief folder beside a phone showing sanitized leads"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Admin releases a sanitized brief before you act on client leads.</figcaption>
+        </figure>
+      </section>
+
+      <section id="evidence" class="section guide-block">
+        <div class="guide-copy">
+          <h2>4. Capture evidence</h2>
+          <p class="section-lede">
+            Upload photos or video from gallery, camera, or video record. Tag captures for
+            court-oriented proof (examples: hands, kiss, restaurant, lodging, ID clarity).
+          </p>
+          <ul class="guide-list">
+            <li>Prefer clear public observations with usable faces and context.</li>
+            <li>Keep notes factual: time, place, what was observed — not speculation.</li>
+            <li>Uploads go to secure storage; clients do not see them until admin approves and unlocks.</li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/tutorial-capture-evidence.png"
+            alt="Phone capturing a public restaurant patio with evidence tags"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Tag what the frame proves — distance and context matter.</figcaption>
+        </figure>
+      </section>
+
+      <section id="look-out" class="section alt guide-block">
+        <div class="guide-copy">
+          <h2>5. What to look out for</h2>
+          <ul class="guide-list">
+            <li><strong>Clear faces</strong> when identity is the point of the capture.</li>
+            <li><strong>Timestamps / context</strong> — date, place, and sequence help the Court Package.</li>
+            <li><strong>Lawful public observation only</strong> — sidewalks, public venues, open spaces.</li>
+            <li><strong>No illegal room bugs</strong>, hidden mics, trespass, or private-property intrusion.</li>
+            <li><strong>Identity hidden from client</strong> — never identify yourself to the client or subject as “their investigator.”</li>
+            <li><strong>Wait for admin approve</strong> — pending review is normal; do not expect instant client visibility.</li>
+            <li><strong>Rejected = re-capture</strong> — read the rejection reason, fix framing/quality, upload again.</li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/tutorial-look-out.png"
+            alt="Checklist: clear face, timestamp, and no illegal hidden devices"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Quality, time, and legality — reject means revise and reshoot.</figcaption>
+        </figure>
+      </section>
+
+      <section id="field-tips" class="section guide-block">
+        <div class="guide-copy">
+          <h2>6. Discreet field tips</h2>
+          <ul class="guide-list">
+            <li>Blend in; keep distance; leave if you feel unsafe.</li>
+            <li><strong>Do not confront</strong> the subject, third parties, or the client in the field.</li>
+            <li>One job: observe, document, upload — ops handles unlock and client communication.</li>
+            <li>Protect your own privacy: no case talk in public, no posting about active work.</li>
+          </ul>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/tutorial-field-tips.png"
+            alt="Quiet dusk street observation from a public sidewalk"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Stay calm, stay public, never escalate.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section alt">
+        <h2>Need the ops panel?</h2>
+        <p class="section-lede">
+          Admin runs locally from the monorepo. Copy-paste PowerShell steps live in
+          <code>GETTING_STARTED.md</code> at the project root (not published on this site).
+        </p>
+        <div class="cta-row">
+          <a class="btn ghost" href="./">Back to Discretion</a>
+          <a class="btn primary" href="./#intake">Client intake</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Discretion · Field guide</p>
+      <p class="muted">
+        Adults only · Lawful public observation · No illegal surveillance devices · Manual admin unlock
+      </p>
+    </footer>
+  </body>
+</html>
