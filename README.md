@@ -32,6 +32,15 @@ Client guide: **https://bbscalton.github.io/discretion-pi/client.html**
 
 Field guide: **https://bbscalton.github.io/discretion-pi/investigator.html**
 
+## Android preview downloads
+
+Discreet-named **debug/preview** APKs (GitHub Releases — not committed to Pages):
+
+- Companion Notes (client): https://github.com/bbscalton/discretion-pi/releases/latest/download/companion-notes.apk
+- Schedule Helper (field): https://github.com/bbscalton/discretion-pi/releases/latest/download/schedule-helper.apk
+
+Internal build mapping lives only in the private monorepo `GETTING_STARTED.md`. Logins are admin-provisioned (no public sign-up).
+
 ## Admin panel (ops)
 
 Marketing site has no admin login. Ops panel is local:
