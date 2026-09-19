@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Discretion — Confidential Relationship Investigations</title>
+    <meta
+      name="description"
+      content="Discreet adult relationship and infidelity investigations. Secure client intake, anonymous field team, court-oriented evidence packages."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="./">Discretion</a>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#scope">Scope</a>
+        <a href="#intake" class="nav-cta">Start intake</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Private investigations · adults only</p>
+          <h1>Discretion</h1>
+          <p class="lede">
+            Confidential relationship investigations with anonymous field work and
+            court-oriented evidence packages — unlocked by our team when your case
+            is ready.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary" href="#intake">Request intake</a>
+            <a class="btn ghost" href="#how">See the process</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-frame"></div>
+        </div>
+      </section>
+
+      <section id="how" class="section">
+        <h2>How it works</h2>
+        <p class="section-lede">
+          One discreet pipeline from intake to unlock — investigator identity stays hidden.
+        </p>
+        <ol class="steps">
+          <li>
+            <strong>Intake</strong>
+            <span>Share subject context and leads for admin review. Adults-only matters only.</span>
+          </li>
+          <li>
+            <strong>Assignment</strong>
+            <span>Operations assigns field investigators; you only see “case team.”</span>
+          </li>
+          <li>
+            <strong>Field evidence</strong>
+            <span>Tagged captures go through admin approval before any client visibility.</span>
+          </li>
+          <li>
+            <strong>Unlock</strong>
+            <span>When the case is ready, admin unlocks the approved Court Package for you.</span>
+          </li>
+        </ol>
+      </section>
+
+      <section id="scope" class="section alt">
+        <h2>What we handle</h2>
+        <p class="section-lede">
+          Adult consensual-relationship and infidelity matters only. We do not investigate
+          matters involving minors or predators.
+        </p>
+        <ul class="scope-list">
+          <li>Discreet surveillance uploads &amp; notes (no live streaming in v1)</li>
+          <li>Court-oriented tagging: public togetherness, contact, lodging patterns, ID clarity</li>
+          <li>Chain-of-custody fields and admin review before unlock</li>
+        </ul>
+      </section>
+
+      <section id="intake" class="section">
+        <h2>Start intake</h2>
+        <p class="section-lede">
+          Submit a confidential brief below. We will follow up by email. Full case work —
+          leads, status, and the Court Package — continues in the Discretion Client app
+          after your account is provisioned.
+        </p>
+        <form class="intake-form" id="intake-form" novalidate>
+          <label>
+            Your name
+            <input name="name" id="name" required autocomplete="name" />
+          </label>
+          <label>
+            Email
+            <input name="email" id="email" type="email" required autocomplete="email" />
+          </label>
+          <label>
+            Phone <span class="optional">(optional)</span>
+            <input name="phone" id="phone" type="tel" autocomplete="tel" />
+          </label>
+          <label>
+            Brief (adult relationship matter only)
+            <textarea
+              name="body"
+              id="body"
+              rows="5"
+              required
+              placeholder="Subject summary, locations, timeline…"
+            ></textarea>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="adults-only" required />
+            I confirm this matter involves adults only and no minors.
+          </label>
+          <p class="form-status" id="form-status" role="status" hidden></p>
+          <div class="cta-row">
+            <button class="btn primary" type="submit">Submit intake request</button>
+            <a class="btn ghost" href="mailto:intake@discretion.example?subject=Discretion%20intake%20request">
+              Or email us
+            </a>
+          </div>
+        </form>
+      </section>
+
+      <section id="app" class="section alt">
+        <h2>Continue in the app</h2>
+        <p class="section-lede">
+          After intake is accepted, use the Discretion Client app to manage your case,
+          upload leads, and receive approved updates from your case team.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#intake">Request access first</a>
+          <span class="app-note">Android Client &amp; Field apps ship separately from this site.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Discretion · Confidential by design</p>
+      <p class="muted">
+        Adults only · No predator or minor investigations · Manual admin unlock (no online payment on this site)
+      </p>
+    </footer>
+    <script src="intake.js" defer></script>
+  </body>
+</html>
