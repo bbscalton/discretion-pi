@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -36,7 +36,7 @@
       <section class="hero">
         <div class="hero-media" data-parallax aria-hidden="true">
           <img
-            src="images/hero-georgetown-dusk.png"
+            src="images/manga-hero-georgetown.png"
             alt=""
             width="1920"
             height="1080"
@@ -44,48 +44,93 @@
           />
         </div>
         <div class="hero-copy">
-          <p class="eyebrow">Guyana · adults only · confidential</p>
+          <p class="eyebrow">Guyana · adults 18+ · confidential</p>
           <h1>Discretion</h1>
           <p class="lede">
-            When you need to know — quietly. Local field work, clear evidence, prices in GYD.
+            When you need to know — quietly. Local field work. Clear evidence. Prices in GYD.
           </p>
           <div class="cta-row">
-            <a class="btn primary" href="./portal-client.html">Request investigation</a>
+            <a class="btn primary stamp sticker-pop" href="./portal-client.html">Request investigation</a>
             <a class="btn ghost" href="./pricing.html">See pricing</a>
           </div>
         </div>
       </section>
 
-      <section id="how" class="section split reveal">
-        <div class="split-copy">
+      <section id="how" class="section reveal">
+        <div class="chapter-title">
+          <span class="chapter-num">Chapter 1</span>
           <h2>How it works</h2>
-          <p class="section-lede">
-            Simple path from your story to approved evidence. Field investigators stay anonymous —
-            you only see “Case team.”
-          </p>
-          <ol class="steps">
-            <li>
+        </div>
+        <p class="section-lede">
+          Four panels. Your story → approved evidence. Field investigators stay anonymous —
+          you only see “Case team.”
+        </p>
+        <ol class="comic-steps panel-reveal">
+          <li>
+            <div class="panel-art">
+              <img
+                src="images/manga-step-1-tell.png"
+                alt="Client writing a confidential brief"
+                width="800"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+            <div class="panel-copy">
               <strong>Tell us what’s going on</strong>
-              <span>Share subject context and leads in confidence. Adults-only matters only.</span>
-            </li>
-            <li>
+              <span>Share subject context and leads. Adults-only matters only.</span>
+            </div>
+          </li>
+          <li>
+            <div class="panel-art">
+              <img
+                src="images/manga-step-2-team.png"
+                alt="Field investigator observing discreetly"
+                width="800"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+            <div class="panel-copy">
               <strong>We put a team on it</strong>
               <span>Discreet field work starts. You never see who is assigned.</span>
-            </li>
-            <li>
+            </div>
+          </li>
+          <li>
+            <div class="panel-art">
+              <img
+                src="images/manga-step-3-review.png"
+                alt="Sealed evidence envelope under review"
+                width="800"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+            <div class="panel-copy">
               <strong>Evidence gets reviewed</strong>
               <span>Tagged captures are checked before anything reaches your vault.</span>
-            </li>
-            <li>
+            </div>
+          </li>
+          <li>
+            <div class="panel-art">
+              <img
+                src="images/manga-step-4-unlock.png"
+                alt="Client unlocking the evidence vault"
+                width="800"
+                height="800"
+                loading="lazy"
+              />
+            </div>
+            <div class="panel-copy">
               <strong>Unlock when ready</strong>
-              <span>Your case manager unlocks the approved package — you pay after unlock.</span>
-            </li>
-          </ol>
-        </div>
-        <figure class="split-visual">
+              <span>Your case manager unlocks the package — you pay after unlock.</span>
+            </div>
+          </li>
+        </ol>
+        <figure class="manga-panel reveal" style="max-width: 720px; margin-top: 0.5rem">
           <img
-            src="images/how-it-works-trust.png"
-            alt="Confidential handover of a sealed envelope on a warm wooden desk"
+            src="images/manga-how-it-works-panels.png"
+            alt="Four-panel comic: tell us, field work, review, unlock"
             width="1200"
             height="900"
             loading="lazy"
@@ -94,11 +139,22 @@
       </section>
 
       <section id="pricing" class="section alt reveal">
-        <h2>Packages in GYD</h2>
+        <div class="chapter-title">
+          <span class="chapter-num">Chapter 2</span>
+          <h2>Packages in GYD</h2>
+        </div>
         <p class="section-lede">
-          Straight prices in Guyanese dollars. Pay after your case manager unlocks approved
-          evidence — not a public checkout cart.
+          Straight prices in Guyanese dollars. Pay after unlock — not a public checkout cart.
         </p>
+        <figure class="quest-banner-art">
+          <img
+            src="images/manga-pricing-quest.png"
+            alt=""
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+        </figure>
         <!-- PROMO_END: edit website/site.js DISCRETION_INTAKE_PROMO.end (default 2026-10-31) -->
         <aside class="promo-banner" data-intake-promo>
           <strong>Free Intake &amp; case setup this month</strong>
@@ -136,17 +192,19 @@
           </div>
         </div>
         <div class="cta-row" style="margin-top: 1.75rem">
-          <a class="btn primary" href="./pricing.html">Full pricing</a>
+          <a class="btn primary stamp sticker-pop" href="./pricing.html">Full pricing</a>
           <a class="btn ghost" href="./portal-client.html">Request intake</a>
         </div>
       </section>
 
       <section id="scope" class="section split reverse reveal">
         <div class="split-copy">
-          <h2>What we handle</h2>
+          <div class="chapter-title">
+            <span class="chapter-num">Chapter 3</span>
+            <h2>What we handle</h2>
+          </div>
           <p class="section-lede">
-            Adult relationship and fidelity questions — handled with care. We do not take
-            matters involving minors or predators.
+            Adult relationship and fidelity questions — handled with care. No minors. No predators.
           </p>
           <ul class="scope-list">
             <li>Quiet surveillance notes and uploads (no live streaming)</li>
@@ -156,8 +214,8 @@
         </div>
         <figure class="split-visual">
           <img
-            src="images/section-privacy-brass.png"
-            alt="Sealed envelope, brass key, and notebook by a rainforest dusk window"
+            src="images/manga-step-3-review.png"
+            alt="Sealed evidence dossier with brass stamp"
             width="1200"
             height="900"
             loading="lazy"
@@ -167,7 +225,7 @@
 
       <section class="atmosphere reveal" aria-hidden="true">
         <img
-          src="images/section-riverside-glow.png"
+          src="images/manga-hero-georgetown.png"
           alt=""
           width="1920"
           height="1080"
@@ -176,37 +234,43 @@
         />
       </section>
 
-      <section id="field" class="section reveal">
-        <h2>Field investigators</h2>
-        <p class="section-lede">
-          Earn per approved evidence set in GYD — with high-proof bonuses and monitoring
-          stipends. Clients never learn your name.
-        </p>
-        <div class="cta-row">
-          <a class="btn primary" href="./portal-investigator.html">Join the field team</a>
-          <a class="btn ghost" href="./earn.html">See earnings</a>
-          <a class="btn ghost" href="./investigator.html">Field guide</a>
+      <section id="field" class="section split reveal">
+        <div class="split-copy">
+          <div class="chapter-title">
+            <span class="chapter-num">Chapter 4</span>
+            <h2>Field investigators</h2>
+          </div>
+          <p class="section-lede">
+            Earn per approved evidence set in GYD — 40% platform / 60% you. Clients never learn your name.
+          </p>
+          <div class="cta-row">
+            <a class="btn primary stamp sticker-pop" href="./portal-investigator.html">Join the field team</a>
+            <a class="btn ghost" href="./earn.html">See earnings</a>
+            <a class="btn ghost" href="./investigator.html">Field guide</a>
+          </div>
         </div>
-      </section>
-
-      <section class="atmosphere reveal" aria-hidden="true" style="height: clamp(10rem, 22vw, 16rem)">
-        <img
-          src="images/section-kaieteur-mist.png"
-          alt=""
-          width="1920"
-          height="1080"
-          loading="lazy"
-        />
+        <figure class="split-visual">
+          <img
+            src="images/manga-earn-path.png"
+            alt="Field investigator on a Georgetown dusk street"
+            width="1600"
+            height="900"
+            loading="lazy"
+          />
+        </figure>
       </section>
 
       <section id="start" class="section alt reveal">
-        <h2>Start online</h2>
+        <div class="chapter-title">
+          <span class="chapter-num">Chapter 5</span>
+          <h2>Start online</h2>
+        </div>
         <p class="section-lede">
-          Sign in with Google, complete a confidential application, and track approval in your
-          portal. Full case work continues in the app after you’re approved and set an app password.
+          Sign in with Google. Complete a confidential application. Track approval in your portal.
+          Case work continues in the app after you’re approved.
         </p>
         <div class="cta-row">
-          <a class="btn primary" href="./portal-client.html">Request investigation</a>
+          <a class="btn primary stamp sticker-pop" href="./portal-client.html">Request investigation</a>
           <a class="btn ghost" href="./portal-investigator.html">Join field team</a>
         </div>
         <p class="app-note" style="margin-top: 1.25rem">
@@ -216,7 +280,10 @@
       </section>
 
       <section id="legacy-intake" class="section reveal">
-        <h2>Prefer email?</h2>
+        <div class="chapter-title">
+          <span class="chapter-num">Bonus panel</span>
+          <h2>Prefer email?</h2>
+        </div>
         <p class="section-lede">
           Send a short brief below — we also keep a local copy in your browser. The online
           portal above is the smoother path.
@@ -250,7 +317,7 @@
           </label>
           <p class="form-status" id="form-status" role="status" hidden></p>
           <div class="cta-row">
-            <button class="btn primary" type="submit">Submit intake request</button>
+            <button class="btn primary stamp" type="submit">Submit intake request</button>
             <a class="btn ghost" href="mailto:intake@discretion.example?subject=Discretion%20intake%20request">
               Or email us
             </a>
@@ -259,14 +326,17 @@
       </section>
 
       <section id="app" class="section alt reveal">
-        <h2>Continue in the app</h2>
+        <div class="chapter-title">
+          <span class="chapter-num">Chapter 6</span>
+          <h2>Continue in the app</h2>
+        </div>
         <p class="section-lede">
           After portal approval, set an app password, install the preview Android build, and
           sign in with email + password — not Google. Adults only.
         </p>
         <div class="cta-row">
           <a
-            class="btn primary"
+            class="btn primary stamp sticker-pop"
             href="https://github.com/bbscalton/discretion-pi/releases/latest/download/companion-notes.apk"
             >Download Companion Notes</a
           >

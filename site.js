@@ -25,8 +25,8 @@
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* Scroll reveal */
-  var reveals = document.querySelectorAll(".reveal");
+  /* Scroll reveal + comic panel reveal */
+  var reveals = document.querySelectorAll(".reveal, .panel-reveal");
   if (reveals.length && !reduceMotion && "IntersectionObserver" in window) {
     var io = new IntersectionObserver(
       function (entries) {
@@ -45,6 +45,25 @@
   } else {
     reveals.forEach(function (el) {
       el.classList.add("is-visible");
+    });
+  }
+
+  /* Sticker-pop CTAs when they enter view */
+  var stickers = document.querySelectorAll(".sticker-pop");
+  if (stickers.length && !reduceMotion && "IntersectionObserver" in window) {
+    var stickerIo = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-popped");
+            stickerIo.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    stickers.forEach(function (el) {
+      stickerIo.observe(el);
     });
   }
 

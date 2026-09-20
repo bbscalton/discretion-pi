@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.ico" sizes="any" />
   </head>
   <body>
+    <div class="accent-bar" aria-hidden="true"></div>
     <header class="site-header">
       <a class="logo" href="./">Discretion</a>
       <nav>
@@ -42,7 +43,7 @@
           the subject must be 18 or older. Your account stays pending until operations approves it.
         </p>
         <div class="portal-card">
-          <button type="button" class="btn primary portal-google-btn" id="google-sign-in">
+          <button type="button" class="btn primary stamp sticker-pop portal-google-btn" id="google-sign-in">
             Continue with Google
           </button>
           <p class="form-status" id="sign-in-status" role="status" hidden></p>
@@ -191,5 +192,6 @@
     <script src="js/portal-shared.js"></script>
     <script src="js/r2-portal.js"></script>
     <script src="js/portal-client.js"></script>
+      <script src="site.js" defer></script>
   </body>
 </html>

@@ -6,49 +6,54 @@
     <title>Client guide — Discretion</title>
     <meta
       name="description"
-      content="How to use the Discretion Client app: intake, lead uploads, Case team updates, and the evidence vault after admin unlock."
+      content="How to use the Discretion Client app: intake, lead uploads, Case team updates, and the evidence vault after unlock. Pricing in GYD."
     />
     <meta name="robots" content="index,follow" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bangers&family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="guide-page">
+    <div class="accent-bar" aria-hidden="true"></div>
     <header class="site-header">
       <a class="logo" href="./">Discretion</a>
       <nav>
         <a href="./">Home</a>
+        <a href="./pricing.html">Pricing</a>
         <a href="./client.html" aria-current="page">Client guide</a>
-        <a href="./investigator.html">Field guide</a>
+        <a href="./learn.html">Learn</a>
         <a href="./portal-client.html" class="nav-cta">Request investigation</a>
       </nav>
     </header>
 
     <main>
-      <section class="guide-hero section">
-        <p class="eyebrow">Client app</p>
+      <section class="guide-hero section reveal">
+        <p class="eyebrow">Client app · Companion Notes · 18+</p>
         <h1>Client guide</h1>
         <p class="lede">
-          How to open Discretion Client, submit your case, send leads to ops,
-          follow Case team updates, and view approved evidence after unlock.
+          Install Companion Notes. Submit your case. Send leads. Follow Case team updates.
+          View approved evidence after unlock.
         </p>
         <p class="disclaimer">
           <strong>Adults only.</strong> Discretion handles adult consensual-relationship
           and infidelity matters only. We do not investigate minors or predators.
           You never see investigator identity — only “Case team.” Logins are created by
           your case manager — there is no public Create account.
+          <strong>Learn &amp; strength</strong> content is educational information — not a
+          diagnosis. Only a qualified professional can diagnose.
         </p>
         <div class="cta-row" style="margin-top: 1.5rem">
           <a
-            class="btn primary"
+            class="btn primary stamp sticker-pop"
             href="https://github.com/bbscalton/discretion-pi/releases/latest/download/companion-notes.apk"
             >Download Companion Notes</a
           >
           <a class="btn ghost" href="./portal-client.html">Request investigation</a>
+          <a class="btn ghost" href="./pricing.html">Pricing (GYD)</a>
         </div>
         <p class="muted" style="margin-top: 0.75rem">
           Preview / debug APK · If Android blocks the install, allow installs from your browser
@@ -58,7 +63,10 @@
 
       <section id="get-app" class="section alt guide-block">
         <div class="guide-copy">
-          <h2>1. Install &amp; sign in</h2>
+          <div class="chapter-title">
+            <span class="chapter-num">Step 1</span>
+            <h2>Install &amp; sign in</h2>
+          </div>
           <p class="section-lede">
             Install <strong>Companion Notes</strong> (client access). Your case manager creates
             the login — you only sign in.
@@ -74,7 +82,7 @@
               Sign in with the email and temporary password your case manager shared.
             </li>
             <li>
-              Do not use the field / Schedule Helper build — that is a separate app for ops.
+              Do not use the Schedule Helper build — that is a separate app for the field team.
             </li>
           </ul>
         </div>
@@ -92,18 +100,20 @@
 
       <section id="intake" class="section guide-block">
         <div class="guide-copy">
-          <h2>2. Submit intake / open a case</h2>
+          <div class="chapter-title">
+            <span class="chapter-num">Step 2</span>
+            <h2>Submit intake / open a case</h2>
+          </div>
           <p class="section-lede">
             Start with a confidential brief: subject context, locations, and timeline.
-            Ops reviews intake before assignment.
+            Your case manager reviews intake before assignment.
           </p>
           <ul class="guide-list">
             <li>Confirm the matter involves <strong>adults only</strong>.</li>
             <li>Be factual: who, where, when — avoid speculation.</li>
             <li>
-              Status begins at <strong>intake</strong>, then moves through
-              assigned → active → under_review → ready_to_unlock → unlocked
-              as ops and field work progress.
+              Status begins at intake, then moves through assigned → active → under review →
+              ready to unlock → unlocked as work progresses.
             </li>
             <li>
               Website intake requests are a first contact; full case work continues
@@ -119,17 +129,34 @@
             height="900"
             loading="lazy"
           />
-          <figcaption>Your brief goes to ops first — not directly to a field investigator.</figcaption>
+          <figcaption>Your brief goes to Case team first — not directly to a named investigator.</figcaption>
         </figure>
       </section>
 
-      <section id="leads" class="section alt guide-block">
+      <section id="pricing-note" class="section alt">
+        <div class="chapter-title">
+          <span class="chapter-num">Pricing note</span>
+          <h2>Packages &amp; payment</h2>
+        </div>
+        <p class="section-lede">
+          Packages are priced in <strong>GYD</strong>. Evidence unlock fees apply when your
+          case manager releases approved vault materials. Ask Case team which package fits —
+          payment is arranged after unlock (invoice), not as public self-checkout.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary stamp sticker-pop" href="./pricing.html">View full pricing</a>
+        </div>
+      </section>
+
+      <section id="leads" class="section guide-block">
         <div class="guide-copy">
-          <h2>3. Upload leads to admin</h2>
+          <div class="chapter-title">
+            <span class="chapter-num">Step 3</span>
+            <h2>Upload leads</h2>
+          </div>
           <p class="section-lede">
-            Send photos and notes that help ops (messaging screenshots, location
-            hints, timelines). Leads go to <strong>admin first</strong> — they are
-            sanitized before any field release.
+            Send photos and notes that help your case (messaging screenshots, location
+            hints, timelines). Leads are reviewed and sanitized before any field release.
           </p>
           <ul class="guide-list">
             <li>Upload clear screenshots and photos from your gallery.</li>
@@ -146,25 +173,60 @@
             height="900"
             loading="lazy"
           />
-          <figcaption>Leads reach admin for review before anything reaches the field.</figcaption>
+          <figcaption>Leads are reviewed before anything reaches the field.</figcaption>
+        </figure>
+      </section>
+
+      <section id="activity" class="section alt guide-block">
+        <div class="guide-copy">
+          <div class="chapter-title">
+            <span class="chapter-num">Step 3b</span>
+            <h2>Partner activity / incident log</h2>
+          </div>
+          <p class="section-lede">
+            From home or a case, tap <strong>Document today</strong> (or open <strong>Activity log</strong>)
+            to journal what happened: dated facts, how you felt, pattern tags, photos, video, and voice notes.
+            Entries sync to your secure case file in the cloud.
+          </p>
+          <ul class="guide-list">
+            <li>Leave a daily voice log, add photos or video of interactions to review later with a therapist.</li>
+            <li>Tag patterns (gaslighting, triangulation, love-bombing, etc.) — tap <strong>Learn</strong> on a tag for the educational card. Tags are labels, not diagnoses.</li>
+            <li>If others may appear in audio/video, confirm the consent notice first. Recording always shows a clear red indicator — this is not a hidden spy tool.</li>
+            <li>Open an entry later to replay media by date. Use <strong>Share with therapist</strong> for a text summary (share media files manually).</li>
+            <li>Entries are reviewed before field visibility or Court Package inclusion.</li>
+          </ul>
+          <p>
+            Also open <strong>Learn &amp; strength</strong> from home for educational modules —
+            or read the web version at <a href="./learn.html">learn.html</a>.
+          </p>
+        </div>
+        <figure class="guide-visual">
+          <img
+            src="images/learn-documenting.png"
+            alt="Illustration of documenting dated facts in a journal"
+            width="1200"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>Cloud-backed activity log — stored with your case, not only on the phone.</figcaption>
         </figure>
       </section>
 
       <section id="updates" class="section guide-block">
         <div class="guide-copy">
-          <h2>4. Status updates &amp; Case team chat</h2>
+          <div class="chapter-title">
+            <span class="chapter-num">Step 4</span>
+            <h2>Status updates &amp; Case team chat</h2>
+          </div>
           <p class="section-lede">
             Follow your case timeline and message <strong>Case team</strong> —
-            brand/support/admin chat, never investigator legal names.
+            support chat, never investigator legal names.
           </p>
           <ul class="guide-list">
             <li>
-              Timeline:
-              <strong>intake</strong> → <strong>assigned</strong> →
-              <strong>active</strong> → <strong>under_review</strong> →
-              <strong>ready_to_unlock</strong> → <strong>unlocked</strong>.
+              Timeline moves from intake through assignment, active work, review, and unlock.
             </li>
-            <li>During active / undercover work, updates stay high-level by design.</li>
+            <li>During active field work, updates stay high-level by design.</li>
             <li>Ask Case team questions in-app; do not expect real-time field narration.</li>
             <li>You will never see investigator identity in chat or status.</li>
           </ul>
@@ -177,24 +239,26 @@
             height="900"
             loading="lazy"
           />
-          <figcaption>Case team = ops/support brand — not a named investigator.</figcaption>
+          <figcaption>Case team is support branding — not a named investigator.</figcaption>
         </figure>
       </section>
 
       <section id="vault" class="section alt guide-block">
         <div class="guide-copy">
-          <h2>5. Evidence vault — locked until unlock</h2>
+          <div class="chapter-title">
+            <span class="chapter-num">Step 5</span>
+            <h2>Evidence vault — locked until unlock</h2>
+          </div>
           <p class="section-lede">
-            Approved field evidence stays in a locked vault until admin sets the
-            case to <strong>unlocked</strong> after <strong>ready_to_unlock</strong>.
-            Unlock is manual (ops) — this guide does not cover online payment.
+            Approved field evidence stays in a locked vault until your case manager unlocks
+            the package. Payment for unlock tiers is arranged then — see
+            <a href="./pricing.html">pricing</a>.
           </p>
           <ul class="guide-list">
             <li>While locked: you see status and Case team updates, not media.</li>
-            <li>Admin approves captures before they can appear in your package.</li>
+            <li>Captures are reviewed before they can appear in your package.</li>
             <li>
-              After <strong>unlocked</strong>: view the approved Court Package /
-              evidence the team released for you.
+              After unlock: view the approved Court Package / evidence released for you.
             </li>
             <li>Clients cannot unlock a case themselves.</li>
           </ul>
@@ -207,13 +271,16 @@
             height="900"
             loading="lazy"
           />
-          <figcaption>Locked vault first; approved evidence only after admin unlock.</figcaption>
+          <figcaption>Locked vault first; approved evidence only after unlock.</figcaption>
         </figure>
       </section>
 
       <section id="look-out" class="section guide-block">
         <div class="guide-copy">
-          <h2>6. What to look out for</h2>
+          <div class="chapter-title">
+            <span class="chapter-num">Step 6</span>
+            <h2>What to look out for</h2>
+          </div>
           <ul class="guide-list">
             <li>
               <strong>Privacy</strong> — keep case talk private; do not post about
@@ -224,12 +291,12 @@
               you believe is involved.
             </li>
             <li>
-              <strong>High-level updates during undercover</strong> — limited detail
-              while status is active / under_review is normal.
+              <strong>High-level updates during field work</strong> — limited detail
+              while the case is active is normal.
             </li>
             <li>
               <strong>Evidence only after unlock</strong> — vault media appears when
-              admin sets unlocked, not sooner.
+              your case manager unlocks, not sooner.
             </li>
             <li>
               <strong>Adults only</strong> — Discretion does not take minor or
@@ -249,19 +316,22 @@
             height="900"
             loading="lazy"
           />
-          <figcaption>Stay discreet, stay patient, let ops unlock when ready.</figcaption>
+          <figcaption>Stay discreet, stay patient, let Case team unlock when ready.</figcaption>
         </figure>
       </section>
 
       <section class="section alt">
-        <h2>Field team?</h2>
+        <div class="chapter-title">
+          <span class="chapter-num">Next panel</span>
+          <h2>Ready to start?</h2>
+        </div>
         <p class="section-lede">
-          Investigators use Discretion Field — a separate app and guide. Clients
-          never share that surface.
+          Request an investigation online, or review packages in Guyanese dollars first.
         </p>
         <div class="cta-row">
           <a class="btn ghost" href="./">Back to Discretion</a>
-          <a class="btn primary" href="./investigator.html">Field investigator guide</a>
+          <a class="btn ghost" href="./pricing.html">Pricing</a>
+          <a class="btn primary stamp sticker-pop" href="./portal-client.html">Request investigation</a>
         </div>
       </section>
     </main>
@@ -269,8 +339,9 @@
     <footer class="site-footer">
       <p>Discretion · Client guide</p>
       <p class="muted">
-        Adults only · Case team only (no investigator identity) · Manual admin unlock
+        Adults only · Case team only (no investigator identity) · Pay after unlock · GYD pricing
       </p>
     </footer>
+      <script src="site.js" defer></script>
   </body>
 </html>
