@@ -830,6 +830,92 @@ nav a[aria-current="page"] {
   font-weight: 600;
 }
 
+/* ---- Intake promo (Oct 2026) — toggle via site.js PROMO_END ---- */
+.promo-banner {
+  display: none;
+  max-width: 40rem;
+  margin: 1.25rem 0 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid rgba(212, 168, 75, 0.45);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(212, 168, 75, 0.16), transparent 55%),
+    linear-gradient(200deg, rgba(20, 53, 40, 0.55), rgba(11, 16, 14, 0.85));
+  color: var(--mist);
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.promo-banner > strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.price-was {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  color: var(--fog);
+  font-size: 0.72em;
+  margin-right: 0.45rem;
+  font-weight: 500;
+}
+
+.price-now {
+  color: var(--gold);
+}
+
+.price-usual {
+  margin: 0;
+  color: var(--fog);
+  font-size: 0.88rem;
+}
+
+.teaser-price .price-was {
+  font-size: 0.85em;
+  margin-right: 0.35rem;
+}
+
+html.intake-promo-on .promo-banner,
+html.intake-promo-on [data-intake-promo] {
+  display: block;
+}
+
+html.intake-promo-on .pricing-teaser-row [data-intake-promo] {
+  display: inline;
+}
+
+html.intake-promo-on [data-intake-regular] {
+  display: none !important;
+}
+
+html.intake-promo-off .promo-banner,
+html.intake-promo-off [data-intake-promo] {
+  display: none !important;
+}
+
+html.intake-promo-off [data-intake-regular] {
+  display: revert;
+}
+
+/* Before site.js runs, show promo (October 2026 campaign default) */
+html:not(.intake-promo-on):not(.intake-promo-off) .promo-banner,
+html:not(.intake-promo-on):not(.intake-promo-off) [data-intake-promo] {
+  display: block;
+}
+
+html:not(.intake-promo-on):not(.intake-promo-off) .pricing-teaser-row [data-intake-promo] {
+  display: inline;
+}
+
+html:not(.intake-promo-on):not(.intake-promo-off) [data-intake-regular] {
+  display: none !important;
+}
+
 /* Local accent strip */
 .accent-bar {
   height: 3px;

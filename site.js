@@ -1,6 +1,28 @@
 (function () {
   "use strict";
 
+  /**
+   * Intake promo — edit PROMO_END (ISO) to end early or extend.
+   * Visible copy: Free Intake & case setup throughout October 2026.
+   * Base price after promo: GYD$5,000.
+   */
+  var DISCRETION_INTAKE_PROMO = {
+    /* PROMO_END: change this date to turn the promo off */
+    end: "2026-10-31T23:59:59-04:00",
+    monthLabel: "October 2026",
+  };
+
+  var promoActive =
+    !isNaN(Date.parse(DISCRETION_INTAKE_PROMO.end)) &&
+    Date.now() <= Date.parse(DISCRETION_INTAKE_PROMO.end);
+
+  document.documentElement.classList.toggle("intake-promo-on", promoActive);
+  document.documentElement.classList.toggle("intake-promo-off", !promoActive);
+
+  document.querySelectorAll("[data-promo-month]").forEach(function (el) {
+    el.textContent = DISCRETION_INTAKE_PROMO.monthLabel;
+  });
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* Scroll reveal */
