@@ -13,8 +13,8 @@
       title: "The Alibi",
       tagline: "She said she was at work. The clock said otherwise.",
       cover: "images/story-cover-alibi.png",
-      status: "coming-soon",
-      href: null,
+      status: "live",
+      href: "./the-alibi.html",
     },
     {
       id: "seen-together",

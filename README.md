@@ -12,6 +12,7 @@ Static intake / marketing site for **Discretion** (adult relationship & infideli
 | Get started | https://bbscalton.github.io/discretion-pi/getting-started.html |
 | Pricing (GYD) | https://bbscalton.github.io/discretion-pi/pricing.html |
 | Stories / Storyboard | https://bbscalton.github.io/discretion-pi/stories.html |
+| Chapter 01 · The Alibi | https://bbscalton.github.io/discretion-pi/the-alibi.html |
 | Earn (field) | https://bbscalton.github.io/discretion-pi/earn.html |
 | Client guide | https://bbscalton.github.io/discretion-pi/client.html |
 | Field guide | https://bbscalton.github.io/discretion-pi/investigator.html |
