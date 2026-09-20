@@ -59,7 +59,7 @@ Copy `config.example.js` → `config.js` for portal Google Auth locally (`config
 
 ## Pricing (public)
 
-All public prices are in **Guyanese dollars (GYD)**. Clients pay after case-manager unlock (invoice); no public Stripe required for this pass. Field earnings: 70% investigator / 30% platform — see `earn.html`.
+All public prices are in **Guyanese dollars (GYD)**. Clients pay after case-manager unlock (invoice); no public Stripe required for this pass. Field earnings: 60% investigator / 40% platform — see `earn.html`.
 
 ## Android preview downloads
 
