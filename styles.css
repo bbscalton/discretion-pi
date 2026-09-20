@@ -570,6 +570,104 @@ nav a[aria-current="page"] {
   border: 1px solid var(--line);
 }
 
+/* ---- Pricing / earn cards ---- */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  max-width: 1100px;
+}
+
+.price-card {
+  background: rgba(14, 17, 20, 0.65);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.5rem 1.35rem;
+  display: grid;
+  gap: 0.55rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.price-card:hover {
+  border-color: rgba(196, 165, 116, 0.35);
+  transform: translateY(-2px);
+}
+
+.price-card.featured {
+  border-color: rgba(196, 165, 116, 0.45);
+  background:
+    linear-gradient(160deg, rgba(196, 165, 116, 0.1), transparent 55%),
+    rgba(14, 17, 20, 0.75);
+}
+
+.price-card.compact {
+  padding: 1.15rem 1.2rem;
+}
+
+.price-eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--brass);
+}
+
+.price-card h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.45rem;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.price-amount {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.15rem);
+  color: var(--mist);
+  margin: 0.15rem 0;
+  letter-spacing: -0.02em;
+}
+
+.price-blurb {
+  margin: 0;
+  color: var(--fog);
+  font-size: 0.95rem;
+}
+
+.price-includes {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--fog);
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.pricing-teaser {
+  display: grid;
+  gap: 1rem;
+}
+
+.pricing-teaser-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.pricing-teaser-row strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.pricing-teaser-row .teaser-price {
+  color: var(--brass);
+  font-weight: 600;
+}
+
 @media (max-width: 860px) {
   .hero {
     min-height: 85vh;
@@ -589,7 +687,7 @@ nav a[aria-current="page"] {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  nav a:not(.nav-cta):not([href*="investigator"]):not([href*="client"]) {
+  nav a:not(.nav-cta):not([href*="investigator"]):not([href*="client"]):not([href*="pricing"]):not([href*="earn"]) {
     display: none;
   }
 }
