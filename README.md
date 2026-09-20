@@ -15,6 +15,7 @@ Static intake / marketing site for **Discretion** (adult relationship & infideli
 | Chapter 01 · The Alibi | https://bbscalton.github.io/discretion-pi/the-alibi.html |
 | Chapter 02 · Seen Together | https://bbscalton.github.io/discretion-pi/seen-together.html |
 | Chapter 03 · Love Bomb Reset | https://bbscalton.github.io/discretion-pi/love-bomb-reset.html |
+| Chapter 04 · Gaslight Hour | https://bbscalton.github.io/discretion-pi/gaslight-hour.html |
 | Earn (field) | https://bbscalton.github.io/discretion-pi/earn.html |
 | Client guide | https://bbscalton.github.io/discretion-pi/client.html |
 | Field guide | https://bbscalton.github.io/discretion-pi/investigator.html |

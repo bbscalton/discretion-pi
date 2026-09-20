@@ -40,8 +40,8 @@
       title: "Gaslight Hour",
       tagline: "If the story keeps changing, write the time down.",
       cover: "images/story-cover-gaslight.png",
-      status: "coming-soon",
-      href: null,
+      status: "live",
+      href: "./gaslight-hour.html",
     },
     {
       id: "two-phones",
