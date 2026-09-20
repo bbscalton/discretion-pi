@@ -17,6 +17,9 @@ Static intake / marketing site for **Discretion** (adult relationship & infideli
 | Chapter 03 · Love Bomb Reset | https://bbscalton.github.io/discretion-pi/love-bomb-reset.html |
 | Chapter 04 · Gaslight Hour | https://bbscalton.github.io/discretion-pi/gaslight-hour.html |
 | Chapter 05 · Two Phones | https://bbscalton.github.io/discretion-pi/two-phones.html |
+| Chapter 06 · Hotel Lobby | https://bbscalton.github.io/discretion-pi/hotel-lobby.html |
+| Chapter 07 · Witness Said | https://bbscalton.github.io/discretion-pi/witness-said.html |
+| Chapter 08 · Soft Launch Lie | https://bbscalton.github.io/discretion-pi/soft-launch-lie.html |
 | Earn (field) | https://bbscalton.github.io/discretion-pi/earn.html |
 | Client guide | https://bbscalton.github.io/discretion-pi/client.html |
 | Field guide | https://bbscalton.github.io/discretion-pi/investigator.html |

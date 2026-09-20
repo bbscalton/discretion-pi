@@ -58,8 +58,8 @@
       title: "Hotel Lobby",
       tagline: "Brass lights. A name that isn’t yours on the book.",
       cover: "images/story-cover-hotel-lobby.png",
-      status: "coming-soon",
-      href: null,
+      status: "live",
+      href: "./hotel-lobby.html",
     },
     {
       id: "witness-said",
@@ -67,8 +67,8 @@
       title: "Witness Said",
       tagline: "Someone saw. Someone’s ready to say it.",
       cover: "images/story-cover-witness.png",
-      status: "coming-soon",
-      href: null,
+      status: "live",
+      href: "./witness-said.html",
     },
     {
       id: "soft-launch-lie",
@@ -76,8 +76,8 @@
       title: "Soft Launch Lie",
       tagline: "Pretty post. Empty smile. Soft launch, hard truth.",
       cover: "images/story-cover-soft-launch.png",
-      status: "coming-soon",
-      href: null,
+      status: "live",
+      href: "./soft-launch-lie.html",
     },
   ];
 
