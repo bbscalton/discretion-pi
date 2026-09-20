@@ -31,8 +31,8 @@
       title: "Love Bomb Reset",
       tagline: "Too many roses. Too little truth.",
       cover: "images/story-cover-love-bomb.png",
-      status: "coming-soon",
-      href: null,
+      status: "live",
+      href: "./love-bomb-reset.html",
     },
     {
       id: "gaslight-hour",
