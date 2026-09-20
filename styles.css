@@ -1361,6 +1361,165 @@ html:not(.intake-promo-on):not(.intake-promo-off) [data-intake-regular] {
   object-fit: cover;
 }
 
+/* ---- Stories / Storyboard hub ---- */
+.stories-pitch {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stories-pitch li {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.1rem 1.15rem 1.25rem;
+  background: rgba(8, 11, 10, 0.65);
+  border: 3px solid var(--ink);
+  box-shadow: 3px 3px 0 rgba(224, 177, 74, 0.32);
+}
+
+.stories-pitch strong {
+  font-family: var(--font-stamp);
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  font-weight: 400;
+}
+
+.stories-pitch span {
+  color: var(--fog);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin: 0;
+}
+
+.story-card {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(8, 11, 10, 0.72);
+  border: 3.5px solid var(--ink);
+  box-shadow: var(--panel-shadow), 0 0 0 1px rgba(224, 177, 74, 0.18);
+  overflow: hidden;
+  transform: rotate(-0.6deg);
+  transition: transform 0.35s var(--ease-pop), box-shadow 0.25s ease;
+}
+
+.story-card:nth-child(even) {
+  transform: rotate(0.55deg);
+}
+
+.story-card:hover {
+  transform: rotate(0.2deg) translateY(-5px) scale(1.02);
+  box-shadow: 5px 7px 0 rgba(224, 177, 74, 0.42);
+}
+
+.story-card.is-coming-soon {
+  cursor: default;
+}
+
+.story-card.is-coming-soon:hover {
+  transform: rotate(-0.3deg) translateY(-3px);
+}
+
+.story-card-cover {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-bottom: 3px solid var(--ink);
+  background: var(--emerald);
+}
+
+.story-card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s var(--ease-out);
+}
+
+.story-card:hover .story-card-cover img {
+  transform: scale(1.06);
+}
+
+.story-card-stamp {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.65rem;
+  z-index: 2;
+  font-family: var(--font-stamp);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--sakura);
+  border: 2.5px solid var(--ink);
+  padding: 0.28rem 0.55rem;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.45);
+  transform: rotate(8deg);
+}
+
+.story-card-stamp[data-status="live"] {
+  background: var(--gold);
+  transform: rotate(-6deg);
+}
+
+.story-card-body {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.85rem 0.9rem 1.05rem;
+  align-content: start;
+}
+
+.story-card-chapter {
+  font-family: var(--font-stamp);
+  font-size: 0.95rem;
+  color: var(--sakura);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.story-card-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+
+.story-card-tagline {
+  margin: 0;
+  color: var(--fog);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.story-card-cta {
+  margin-top: 0.35rem;
+  font-family: var(--font-stamp);
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+}
+
+@media (max-width: 1100px) {
+  .stories-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 860px) {
   .hero {
     min-height: 85vh;
@@ -1388,7 +1547,20 @@ html:not(.intake-promo-on):not(.intake-promo-off) [data-intake-regular] {
     grid-template-columns: 1fr;
   }
 
-  nav a:not(.nav-cta):not([href*="investigator"]):not([href*="client"]):not([href*="pricing"]):not([href*="earn"]):not([href*="learn"]):not([href*="getting-started"]) {
+  .stories-pitch {
+    grid-template-columns: 1fr;
+  }
+
+  .stories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .story-card,
+  .story-card:nth-child(even) {
+    transform: none;
+  }
+
+  nav a:not(.nav-cta):not([href*="investigator"]):not([href*="client"]):not([href*="pricing"]):not([href*="earn"]):not([href*="learn"]):not([href*="stories"]):not([href*="getting-started"]) {
     display: none;
   }
 
@@ -1418,6 +1590,12 @@ html:not(.intake-promo-on):not(.intake-promo-off) [data-intake-regular] {
   .btn.primary {
     font-size: 1.05rem;
   }
+
+  .stories-grid {
+    grid-template-columns: 1fr;
+    max-width: 22rem;
+    margin-inline: auto;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1439,7 +1617,13 @@ html:not(.intake-promo-on):not(.intake-promo-off) [data-intake-regular] {
   .price-card:hover,
   .nav-cta:hover,
   .split-visual:hover,
-  .manga-panel:hover {
+  .manga-panel:hover,
+  .story-card:hover,
+  .story-card:nth-child(even):hover {
+    transform: none;
+  }
+
+  .story-card:hover .story-card-cover img {
     transform: none;
   }
 }
