@@ -22,8 +22,8 @@
       title: "Seen Together",
       tagline: "One market street. Two shadows that shouldn’t match.",
       cover: "images/story-cover-seen-together.png",
-      status: "coming-soon",
-      href: null,
+      status: "live",
+      href: "./seen-together.html",
     },
     {
       id: "love-bomb-reset",
