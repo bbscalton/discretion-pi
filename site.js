@@ -79,6 +79,15 @@
       status: "live",
       href: "./soft-launch-lie.html",
     },
+    {
+      id: "open-thread",
+      chapter: "Chapter 09",
+      title: "Open Thread",
+      tagline: "Their messages were open. Your next move matters.",
+      cover: "images/story-cover-open-thread.png",
+      status: "live",
+      href: "./open-thread.html",
+    },
   ];
 
   function renderStoriesGrid() {
