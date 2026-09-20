@@ -49,8 +49,8 @@
       title: "Two Phones",
       tagline: "One pocket. Two glowing secrets.",
       cover: "images/story-cover-two-phones.png",
-      status: "coming-soon",
-      href: null,
+      status: "live",
+      href: "./two-phones.html",
     },
     {
       id: "hotel-lobby",
