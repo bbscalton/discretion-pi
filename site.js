@@ -67,6 +67,41 @@
     });
   }
 
+  /* Getting started: sticky Client / Field path highlight */
+  var pathBtns = document.querySelectorAll(".path-sticky-btn[data-path]");
+  var pathSections = document.querySelectorAll("[data-path-section]");
+  if (pathBtns.length && pathSections.length) {
+    function setActivePath(path) {
+      pathBtns.forEach(function (btn) {
+        btn.classList.toggle("is-active", btn.getAttribute("data-path") === path);
+      });
+    }
+
+    if ("IntersectionObserver" in window) {
+      var pathIo = new IntersectionObserver(
+        function (entries) {
+          var visible = entries
+            .filter(function (e) {
+              return e.isIntersecting;
+            })
+            .sort(function (a, b) {
+              return b.intersectionRatio - a.intersectionRatio;
+            })[0];
+          if (visible) {
+            setActivePath(visible.target.getAttribute("data-path-section"));
+          }
+        },
+        { rootMargin: "-30% 0px -45% 0px", threshold: [0.1, 0.25, 0.5] }
+      );
+      pathSections.forEach(function (section) {
+        pathIo.observe(section);
+      });
+    }
+
+    if (location.hash === "#field") setActivePath("field");
+    else if (location.hash === "#client") setActivePath("client");
+  }
+
   /* Hero / atmosphere parallax */
   if (reduceMotion) return;
 

@@ -9,6 +9,7 @@ Static intake / marketing site for **Discretion** (adult relationship & infideli
 | Page | URL |
 |------|-----|
 | Home | https://bbscalton.github.io/discretion-pi/ |
+| Get started | https://bbscalton.github.io/discretion-pi/getting-started.html |
 | Pricing (GYD) | https://bbscalton.github.io/discretion-pi/pricing.html |
 | Earn (field) | https://bbscalton.github.io/discretion-pi/earn.html |
 | Client guide | https://bbscalton.github.io/discretion-pi/client.html |
