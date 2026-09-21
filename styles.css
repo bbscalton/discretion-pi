@@ -1130,6 +1130,124 @@ nav a[aria-current="page"] {
   letter-spacing: 0.03em;
 }
 
+/* ---- Field integrity rules (earn / field) ---- */
+.integrity-banner {
+  max-width: 44rem;
+  margin: 0 0 1.75rem;
+  padding: 1.15rem 1.25rem;
+  border: 3.5px solid var(--ink);
+  border-radius: 4px;
+  background:
+    linear-gradient(135deg, rgba(196, 92, 72, 0.28), transparent 50%),
+    linear-gradient(200deg, rgba(15, 61, 46, 0.55), rgba(8, 11, 10, 0.92));
+  box-shadow: 4px 4px 0 var(--ember);
+  transform: rotate(-0.4deg);
+}
+
+.integrity-banner .quest-badge {
+  font-family: var(--font-stamp);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--ember);
+  border: 2px solid var(--ink);
+  padding: 0.12rem 0.55rem;
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.04em;
+}
+
+.integrity-banner p {
+  margin: 0;
+  color: var(--mist);
+  font-size: 1.02rem;
+  line-height: 1.5;
+}
+
+.integrity-banner strong {
+  color: var(--gold);
+}
+
+.integrity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.integrity-card {
+  background:
+    linear-gradient(165deg, rgba(15, 61, 46, 0.35), transparent 55%),
+    rgba(8, 11, 10, 0.82);
+  border: 3px solid var(--ink);
+  border-radius: 6px;
+  padding: 1.15rem 1.1rem 1.2rem;
+  box-shadow: var(--panel-shadow);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.integrity-card .quest-badge {
+  font-family: var(--font-stamp);
+  font-size: 0.95rem;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  padding: 0.12rem 0.5rem;
+  display: inline-block;
+  width: fit-content;
+  letter-spacing: 0.04em;
+}
+
+.integrity-card .quest-badge.ban {
+  background: var(--ember);
+}
+
+.integrity-card .quest-badge.reject {
+  background: var(--sakura);
+}
+
+.integrity-card .quest-badge.required {
+  background: var(--gold);
+}
+
+.integrity-card .quest-badge.law {
+  background: var(--emerald-bright);
+  color: var(--mist);
+}
+
+.integrity-card h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.15rem;
+  margin: 0;
+  letter-spacing: -0.015em;
+  color: var(--mist);
+}
+
+.integrity-card ul {
+  margin: 0;
+  padding-left: 1.05rem;
+  color: var(--fog);
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.integrity-card li strong {
+  color: var(--mist);
+}
+
+.integrity-foot {
+  max-width: 44rem;
+  margin: 1.5rem auto 0;
+  color: var(--fog);
+  font-size: 0.95rem;
+}
+
+.integrity-foot a {
+  color: var(--gold);
+}
+
 .price-was {
   text-decoration: line-through;
   text-decoration-thickness: 2px;

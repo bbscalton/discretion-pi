@@ -72,6 +72,8 @@ Copy `config.example.js` → `config.js` for portal Google Auth locally (`config
 
 All public prices are in **Guyanese dollars (GYD)**. Clients pay after case-manager unlock (invoice); no public Stripe required for this pass. Field earnings: 60% investigator / 40% platform — see `earn.html`.
 
+**Field integrity (admin mirror):** Approve only real high-resolution field captures. Reject and ban for AI-generated images, staged/stock/stolen media, recycled evidence, metadata tampering, fabricated leads, multi-account fraud, illegal capture, or sharing case info outside the app. Payouts only after client unlock + admin marks paid; rejected evidence is unpaid; chargebacks may reverse. Full public rules: [`earn.html#integrity`](https://bbscalton.github.io/discretion-pi/earn.html#integrity).
+
 ## Android preview downloads
 
 Discreet-named **debug/preview** APKs (GitHub Releases — not committed to Pages):
