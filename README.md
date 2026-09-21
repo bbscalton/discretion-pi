@@ -20,7 +20,6 @@ Static intake / marketing site for **Discretion** (adult relationship & infideli
 | Chapter 06 · Hotel Lobby | https://bbscalton.github.io/discretion-pi/hotel-lobby.html |
 | Chapter 07 · Witness Said | https://bbscalton.github.io/discretion-pi/witness-said.html |
 | Chapter 08 · Soft Launch Lie | https://bbscalton.github.io/discretion-pi/soft-launch-lie.html |
-| Chapter 09 · Open Thread | https://bbscalton.github.io/discretion-pi/open-thread.html |
 | Earn (field) | https://bbscalton.github.io/discretion-pi/earn.html |
 | Client guide | https://bbscalton.github.io/discretion-pi/client.html |
 | Field guide | https://bbscalton.github.io/discretion-pi/investigator.html |
@@ -71,8 +70,6 @@ Copy `config.example.js` → `config.js` for portal Google Auth locally (`config
 ## Pricing (public)
 
 All public prices are in **Guyanese dollars (GYD)**. Clients pay after case-manager unlock (invoice); no public Stripe required for this pass. Field earnings: 60% investigator / 40% platform — see `earn.html`.
-
-**Field integrity (admin mirror):** Approve only real high-resolution field captures. Reject and ban for AI-generated images, staged/stock/stolen media, recycled evidence, metadata tampering, fabricated leads, multi-account fraud, illegal capture, or sharing case info outside the app. Payouts only after client unlock + admin marks paid; rejected evidence is unpaid; chargebacks may reverse. Full public rules: [`earn.html#integrity`](https://bbscalton.github.io/discretion-pi/earn.html#integrity).
 
 ## Android preview downloads
 

@@ -1130,7 +1130,7 @@ nav a[aria-current="page"] {
   letter-spacing: 0.03em;
 }
 
-/* ---- Field integrity rules (earn / field) ---- */
+/* ---- Integrity rules (earn / client house rules) ---- */
 .integrity-banner {
   max-width: 44rem;
   margin: 0 0 1.75rem;
@@ -1235,6 +1235,10 @@ nav a[aria-current="page"] {
 
 .integrity-card li strong {
   color: var(--mist);
+}
+
+.integrity-card a {
+  color: var(--gold);
 }
 
 .integrity-foot {
